@@ -1,0 +1,14 @@
+/* SpeakerVisualizer.module.css */
+
+.speaker {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #333 30%, #000 70%);
+    border-radius: 50%;
+    transition: transform 0.5s ease-in-out;
+}
+  
+.pulse {
+    transform: scale(1.2);
+}
+  

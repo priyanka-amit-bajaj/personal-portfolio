@@ -1,0 +1,76 @@
+/* Social Media Container */
+.socialContainer {
+  display: flex;
+  justify-content: center;
+  gap: 25px; /* Adjust spacing */
+  width: 100%;
+  max-width: 500px; /* Adjust based on layout */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Outer Button (Square with Neon Glow) */
+.socialButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px; /* Increased size */
+  height: 90px;
+  background: linear-gradient(to top, #1f0027, #ff66b2); /* Soft pink glow */
+  border-radius: 14px;
+  position: relative;
+  transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+  box-shadow: 0px 0px 12px rgba(255, 99, 147, 0.8);
+  border: 2px solid #ff99cc;
+  backdrop-filter: blur(4px);
+}
+
+/* Inner Circle (Soft Glow) */
+.socialButton::before {
+  content: "";
+  position: absolute;
+  width: 65px; /* Increased size */
+  height: 65px;
+  background: rgba(255, 99, 147, 0.15);
+  border-radius: 50%;
+  box-shadow: inset -3px -3px 6px rgba(255, 255, 255, 0.2),
+              inset 3px 3px 6px rgba(255, 99, 147, 0.3);
+}
+
+/* Small Corner Dots */
+.socialButton::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  top: 12px;
+  left: 12px;
+  box-shadow: 70px 0px rgba(255, 255, 255, 0.1), 
+              70px 70px rgba(255, 255, 255, 0.1), 
+              0px 70px rgba(255, 255, 255, 0.1);
+}
+
+/* Hover Effect - Glowing Soft Pink */
+.socialButton:hover {
+  transform: scale(1.1);
+  background: #ff99cc;
+  box-shadow: 0px 0px 15px rgba(255, 99, 147, 0.6);
+}
+
+/* Custom Icon Styling */
+.icon {
+  position: relative;
+  width: 38px; /* Adjusted for better visibility */
+  height: 38px;
+  z-index: 2;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* Hover Effect for Icons */
+.socialButton:hover .icon {
+  transform: scale(1.1);
+  filter: brightness(1) invert(0);
+}

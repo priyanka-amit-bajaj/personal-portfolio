@@ -1,0 +1,33 @@
+.contact-slider {
+  @extend .panel !optional;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider-bar {
+  width: 80%;
+  height: 25px;
+  background: var(--button-color);
+  border: 3px solid var(--border-color);
+  box-shadow: 4px 4px var(--shadow-color);
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.slider-handle {
+  width: 20px;
+  height: 20px;
+  background: var(--secondary-color);
+  border: 3px solid var(--border-color);
+  border-radius: 50%;
+  position: absolute;
+  left: 5px;
+  transition: left 0.3s ease-in-out;
+}
+
+.open .slider-handle {
+  left: 80%;
+}

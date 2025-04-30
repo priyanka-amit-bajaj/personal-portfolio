@@ -1,0 +1,21 @@
+/* NavArrows.module.css */
+
+.navArrows {
+    display: flex;
+    gap: 10px;
+}
+  
+.arrow {
+    background: #666;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+  
+.arrow:hover {
+    background: #888;
+    transform: scale(1.1);
+}
+  

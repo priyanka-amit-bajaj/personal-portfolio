@@ -1,0 +1,108 @@
+/* Memory Card Slots */
+.memoryCards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  align-items: center;
+}
+
+/* Individual Memory Card */
+.memoryCard {
+  width: 100%;
+  max-width: 260px;
+  background: #1a012a;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', sans-serif;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 10px rgba(255, 99, 147, 0.9);
+  border: 2px solid #ff66b2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+/* Hover Effect - Soft Pink Glow */
+.memoryCard:hover {
+  transform: scale(1.03);
+  border-color: #ff66b2;
+  box-shadow: 0px 0px 12px rgba(255, 99, 147, 1);
+}
+
+/* Active Memory Card */
+.memoryCard.active {
+  background: #ff99cc;
+  border-color: #ff66b2;
+  box-shadow: inset 0px 0px 8px rgba(255, 99, 147, 0.6),
+              0px 0px 15px rgba(255, 99, 147, 1);
+  transform: scale(1.05);
+  padding-bottom: 15px;
+}
+
+/* Header Bar with LED Light */
+.cardHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+/* Small LED Light Indicator */
+.ledIndicator {
+  width: 8px;
+  height: 8px;
+  background: #ff4d94;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px #ff4d94;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* LED Light Turns Soft Pink When Selected */
+.memoryCard.active .ledIndicator {
+  background: #ff66b2;
+  box-shadow: 0px 0px 8px #ff66b2;
+}
+
+/* Card Title */
+.cardTitle {
+  font-size: 14px;
+  color: #ff66b2;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 8px 0px;
+}
+
+/* Details Expand Smoothly */
+.detailsContainer {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+/* Expanded View */
+.detailsContainer.expanded {
+  max-height: 100px;
+  opacity: 1;
+}
+
+/* Details */
+.details {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #ffffff;
+  font-family: 'Courier New', monospace;
+  background: rgba(255, 99, 147, 0.2);
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+  width: 90%;
+}

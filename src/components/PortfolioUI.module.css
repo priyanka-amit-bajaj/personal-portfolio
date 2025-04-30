@@ -1,0 +1,208 @@
+/* PortfolioUI.module.css */
+/*
+.container {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    gap: 20px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    min-height: 100vh;
+    font-family: "VT323", monospace;
+}
+  
+  .leftPanel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .centerPanel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .rightPanel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .headerButtons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .headerButtons button {
+    background: #444;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .portfolioBox {
+    background: #3a3a3a;
+    height: 150px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .portfolioBox:hover {
+    transform: scale(1.05);
+  }
+  
+  .navArrows {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .navArrows button {
+    background: #666;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .navArrows button:hover {
+    transform: scale(1.1);
+  }
+  
+  .experienceSection {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .colorButtons {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .colorButtons button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  
+  .red {
+    background: red;
+  }
+  
+  .blue {
+    background: blue;
+  }
+  
+  .yellow {
+    background: yellow;
+  }
+  
+  .yearsBadge {
+    background: #4b4b4b;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+  }
+  
+  .projectIcons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .projectIcon {
+    background: #555;
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .projectIcon:hover {
+    transform: scale(1.1);
+  }
+  
+  .speaker {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #333 30%, #000 70%);
+    margin-top: 20px;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+*/
+
+/* Main App Container */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  background: linear-gradient(to bottom, #1a012a, #290537); /* Dark Cyberpunk Theme */
+}
+
+/* Individual Column */
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Enclosed Box for Each Component */
+.box {
+  background: rgba(26, 1, 42, 0.8); /* Dark purple with transparency */
+  padding: 15px;
+  border-radius: 12px;
+  border: 2px solid #ff66b2; /* Neon pink */
+  box-shadow: 0px 0px 15px rgba(255, 99, 147, 0.7);
+  backdrop-filter: blur(6px);
+}
+

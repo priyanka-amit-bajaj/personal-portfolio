@@ -1,0 +1,51 @@
+@use "theme";
+
+body {
+  font-family: var(--font-pixel);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  gap: 20px;
+  padding: 20px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.panel {
+  background: var(--primary-color);
+  border: 3px solid var(--border-color);
+  box-shadow: 6px 6px var(--shadow-color);
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  font-family: var(--font-pixel);
+}
+
+.face-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.face-options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.face-options button {
+  background: var(--button-color);
+  border: 3px solid var(--border-color);
+  padding: 5px;
+  cursor: pointer;
+}

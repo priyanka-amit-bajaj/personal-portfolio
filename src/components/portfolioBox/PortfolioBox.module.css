@@ -1,0 +1,148 @@
+/* Main Container */
+.portfolioContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 182, 193, 0.1); /* Soft pink overlay */
+  padding: 15px;
+  border-radius: 14px;
+  box-shadow: inset 0px 0px 10px rgba(255, 99, 147, 0.3);
+  width: 100%;
+  max-width: 350px;
+  backdrop-filter: blur(6px);
+  border: 2px solid #ff99cc;
+}
+
+/* TV Screen Effect */
+.tvScreen {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: black;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 6px solid #ff66b2;
+  animation: softFlicker 0.2s infinite alternate;
+}
+
+.tvScreen::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+      rgba(255, 255, 255, 0.05) 0px, 
+      rgba(255, 255, 255, 0.05) 2px, 
+      transparent 4px, 
+      transparent 8px
+  );
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Static Noise Effect */
+.static {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/static-noise.gif") no-repeat center center;
+  background-size: cover;
+  opacity: 0.4;
+  animation: flicker 0.2s infinite alternate;
+  z-index: 2;
+}
+
+/* Project Image */
+.projectImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  transform: translateX(-50%);
+}
+
+/* Flickering Animation */
+@keyframes softFlicker {
+  0% { opacity: 0.6; }
+  100% { opacity: 0.8; }
+}
+
+/* Channel Controls */
+.controls {
+  display: flex;
+  gap: 12px;
+}
+
+/* Old TV Style Knobs */
+.knob {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 99, 147, 0.2);
+  border: 4px solid #ff66b2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+  box-shadow: inset -2px -2px 5px rgba(255, 99, 147, 0.1),
+              inset 2px 2px 5px rgba(255, 99, 147, 0.3),
+              3px 3px 5px rgba(255, 99, 147, 0.6);
+}
+
+/* Knob Hover Effect */
+.knob:hover {
+  transform: scale(1.1);
+  background: #ff66b2;
+  box-shadow: 0px 0px 10px rgba(255, 99, 147, 0.5);
+}
+
+/* Arrow Icons Inside Knobs */
+.knob img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+/* Status + Arrows in Same Row */
+.statusContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Status Panel */
+.statusPanel {
+  background: rgba(255, 182, 193, 0.2);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 8px rgba(255, 99, 147, 0.3);
+}
+
+/* Channel Display */
+.channelDisplay {
+  font-size: 18px;
+  font-weight: bold;
+  background: black;
+  color: #ff66b2;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 6px rgba(255, 99, 147, 0.6);
+}
+
+/* Now Playing Text */
+.nowPlaying {
+  color: #ff66b2;
+  font-size: 14px;
+  text-align: center;
+  font-family: 'Press Start 2P', sans-serif;
+  margin-top: 6px;
+}

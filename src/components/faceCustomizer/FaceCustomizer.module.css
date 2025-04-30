@@ -1,0 +1,111 @@
+/* Main Customizer Block */
+.faceCustomizer {
+  background: rgba(255, 182, 193, 0.1); /* Soft pink overlay */
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: inset 0px 0px 8px rgba(255, 99, 147, 0.3);
+  width: 100%;
+  max-width: 300px;
+  backdrop-filter: blur(6px);
+  border: 2px solid #ff99cc;
+}
+
+/* Header */
+.header {
+  color: #ff66b2;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+  text-shadow: 0px 0px 6px rgba(255, 99, 147, 0.7);
+}
+
+/* Header Icon */
+.icon {
+  font-size: 16px;
+}
+
+/* Role Items */
+.roleItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 182, 193, 0.15);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: inset -2px -2px 5px rgba(255, 99, 147, 0.1),
+              inset 2px 2px 5px rgba(255, 99, 147, 0.3);
+}
+
+/* Active (When Switch is On) */
+.roleItem.active {
+  background: #ff99cc;
+  box-shadow: 0px 0px 10px rgba(255, 99, 147, 0.5);
+}
+
+/* Role Name */
+.roleName {
+  color: #ff66b2;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Switch Container */
+.switch {
+  position: relative;
+  width: 45px;
+  height: 22px;
+}
+
+/* Hide Default Checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider Background */
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ff66b2;
+  border-radius: 20px;
+  transition: 0.3s;
+  box-shadow: inset 0px 0px 5px rgba(255, 99, 147, 0.4);
+}
+
+/* Toggle Knob */
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  top: 3px;
+  left: 4px;
+  transition: 0.3s;
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+}
+
+/* When Switch is On */
+.switch input:checked + .slider {
+  background: #ff99cc;
+  box-shadow: 0px 0px 10px rgba(255, 99, 147, 0.6);
+}
+
+/* Knob Moves Right on Toggle */
+.switch input:checked + .slider::before {
+  transform: translateX(22px);
+}
+
+/* Soft Glow on Hover */
+.switch:hover .slider {
+  box-shadow: 0px 0px 12px rgba(255, 99, 147, 0.7);
+}
